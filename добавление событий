@@ -1,0 +1,28 @@
+    \\\+++///
+Добавление событий.
+    =========
+    =========
+//Получаем доступ к дом элементам или к нодам.
+// -- querySelector('') метод поиска элементов	
+// -- document собстенный объект вебстраницы
+// -- .addEventListener регистрирует обработчик события для целевого объекта, для которого он будет вызван при возникновении события.
+var button = document.querySelector('button');
+var h1 = document.querySelector('h1');	
+var input = document.querySelector('input');
+
+function buttonHandler(){
+   console.log('clicked')
+   h1.textContent = input.value;
+}
+
+//так как создавая ф-ю мы получаю свою область контекста и  this ссылается на объект в контексте которого он вызван, т.е. на h1.
+h1.addEventListener('mouseenter', function(){
+this.style.color = 'red';  
+console.log('entered');
+})
+
+h1.addEventListener('mouseleave', function(){
+console.log('leave');
+})
+
+button.addEventListener('click', buttonHandler);
