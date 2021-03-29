@@ -8,13 +8,13 @@
 */
 const Context = function() {
   // 
-  this.name = 'Marcus';  
+ this.name = 'Marcus';  
   
   // Генирируется объеткт city, т.е. это объектный контекст.
   const city = {
-    name: 'Kiev',
+    //name: 'Kiev',
     year: 482,
-    // ф-я объявленная через констр. function, сможет обратиться к объектному контексты
+    // ф-я объявленная через констр. function, сможет обратиться к объектному контекста
 	f1: function() {
       return this.name;
     },
